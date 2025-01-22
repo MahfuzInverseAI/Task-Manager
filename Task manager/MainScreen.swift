@@ -155,6 +155,7 @@ struct MainScreen: View {
                         primaryButton: .destructive(Text("Yes")) {
                             if let deletedID {
                                 manager.deleteTaskFile(id: deletedID)
+                                manager.update()
                             }
                         },
                         secondaryButton: .cancel(Text("No")) {}
